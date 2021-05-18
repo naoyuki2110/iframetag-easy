@@ -1,2 +1,13 @@
-表示したいサイトのURLを張り付けてください
-<input type="text" placeholder="URLを入力">
+表示したいサイトのURLを張り付けてください<br>
+<textarea id="hzmain" name="hzmain" cols="40" rows="4" maxlength="20" placeholder="URLを入力"></textarea><br><button id="button" onclick="click()">表示する！</button><br><br>
+<iframe src=ifurl width="1000" height="750" id="ifr">
+  <script>
+        const greeting = document.getElementById('ifr');
+    const myname = document.getElementById('hzmain');
+
+    const click = () => {
+      const val = myname.value;
+      greeting.innerHTML = "<iframe src=" + val + " width="1000" height="750" id="ifr">";
+      console.log(greeting.innerHTML);
+    };
+  </script>
