@@ -1,13 +1,14 @@
-表示したいサイトのURLを張り付けてください<br>
-<textarea id="hzmain" name="hzmain" cols="40" rows="4" maxlength="20" placeholder="URLを入力"></textarea><br><button id="button" onclick="click()">表示する！</button><br><br>
-<iframe src=ifurl width="1000" height="750" id="ifr">
-  <script>
-        const greeting = document.getElementById('ifr');
-    const myname = document.getElementById('hzmain');
-
-    const click = () => {
-      const val = myname.value;
-      greeting.innerHTML = "<iframe src=val width="1000" height="750" id="ifr">";
-      console.log(greeting.innerHTML);
-    };
-  </script>
+<html><head>
+<title>簡易iframeタグフォーム</title>
+<script language="JavaScript">
+function clickBtn5()
+{
+const val = hzmain.value;
+document.getElementById("ifr").src = val;
+}
+</script>
+</head>
+</head><body><p>表示したいサイトのURLを張り付けてください</p><br>
+<textarea id="hzmain" value="https://google.com" name="hzmain2" cols="70" rows="4" placeholder="URLを入力"></textarea><br><form><input type="button" value="表示する！" onClick="clickBtn5()"></form><br><br>
+<iframe id="ifr" src="https://example.com" name="irm" width="1000" height="750" /></body>
+</html>
